@@ -4,6 +4,7 @@ namespace App\Http\Controllers\dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Client;
+use App\Models\Course;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -14,7 +15,12 @@ class DashboardController extends Controller
     }
 
     public function client(){
-        return view('dashboard.clients.client');
+
+        //fetching/reading data from database
+        $courses = Course::all();
+        // dd($courses->toArray());
+
+        return view('dashboard.clients.client',compact('courses'));
     }
 
     public function create(Request $request){
