@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -23,12 +24,23 @@ class DashboardController extends Controller
             $data = $request->validate([
                 'name' => 'string|max:50',
                 'mobile' => 'string|max:20',
-                'email' => 'string|required|unique:table,column,except,id'
+                'email' => 'string|required|unique:clients,email',
+                'education' => 'string|required',
+                'course_id' => 'required|integer',
+                'percentage' => 'nullable|integer',
+                'age' => 'nullable|integer',
+                'message' => 'nullable|string'
+
             ]);
+
+            Client::create($data);
+
+            return back()->with('success','Data saved successfully.');
 
 
 
         }catch(\Exception $e){
+            return back()->with('error','Something went wrong.'.$e->getMessage());
 
         }
     }

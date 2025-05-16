@@ -11,11 +11,17 @@ class Client extends Model
         'mobile',
         'email',
         'education',
-        'course',
+        'course_id',
         'percentage',
         'age',
-        'status'
+        'status',
+        'message'
 
 
     ];
+
+    //relation
+    public function course(){
+        return $this->belongsTo(Course::class);
+    }
 }

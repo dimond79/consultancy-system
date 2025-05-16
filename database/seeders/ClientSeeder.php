@@ -18,10 +18,11 @@ class ClientSeeder extends Seeder
             'mobile' => '98655255',
             'email'=> 'dimond@gmail.com',
             'education' => 'Bachelor',
-            'course' => 'IT',
+            'course_id' => '1',
             'percentage'=>'96',
             'age'=>'22',
-            'status' => '1'
+            'status' => '1',
+            'message' => 'I want to study in U.S.A.'
         ]);
     }
 }
