@@ -19,8 +19,10 @@ class DashboardController extends Controller
         //fetching/reading data from database
         $courses = Course::all();
         // dd($courses->toArray());
+        $clients = Client::with('Course')->get();
+        // dd($clients->toArray());
 
-        return view('dashboard.clients.client',compact('courses'));
+        return view('dashboard.clients.client',compact('courses','clients'));
     }
 
     public function create(Request $request){
@@ -49,5 +51,15 @@ class DashboardController extends Controller
             return back()->with('error','Something went wrong.'.$e->getMessage());
 
         }
+    }
+
+    public function edit($id) {
+        // reading from database
+        $courses = Course::all();
+        // dd($courses->toArray());
+        $clients = Client::with('course')->findOrFail($id);
+        // dd($clients->toArray());
+
+        return view('dashboard.clients.edit-client',compact('clients','courses'));
     }
 }

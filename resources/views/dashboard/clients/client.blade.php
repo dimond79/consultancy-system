@@ -2,6 +2,20 @@
 
 @section('main-content')
     <div id="page-content-wrapper">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Clients</h1>
+            <div>
+                <button class="btn btn-sm btn-outline-secondary me-2">
+                    <i class="fas fa-file-export fa-sm"></i> Export
+                </button>
+                <a href="#"><button class="btn btn-sm btn-primary">
+                        <i class="fas fa-plus fa-sm"></i> Add Client
+                    </button></a>
+                <a href="#"><button class="btn btn-sm btn-primary">
+                        <i class="fas fa-plus fa-sm"></i> Add Course
+                    </button></a>
+            </div>
+        </div>
         <div class="container-fluid">
             @if (session('success'))
                 <div class="alert alert-success">
@@ -15,7 +29,7 @@
                 </div>
             @endif
 
-            {{-- {{$courses}} --}}
+            {{-- {{$clients}} --}}
             <form action="{{ route('client.create') }}" method="POST">
                 @csrf
                 <div class="row g-3">
@@ -76,23 +90,51 @@
                     </div>
                 </div>
             </form>
+
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Mobile No.</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Education</th>
+                        <th scope="col">Course</th>
+                        <th scope="col">Percentage</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Message</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
+                    <div class="my-3">
+                        <h4>Client Details:</h4>
+                        @foreach ($clients as $client)
+                            <tr>
+                                <th scope="row">{{ $client->id }}</th>
+                                <td>{{ $client->name }}</td>
+                                <td>{{ $client->mobile }}</td>
+                                <td>{{ $client->email }}</td>
+                                <td>{{ $client->education }}</td>
+                                <td>{{ $client->course->course_name }}</td>
+                                <td>{{ $client->percentage }}</td>
+                                <td>{{ $client->age }}</td>
+                                <td>{{ $client->message }}</td>
+                                <td>{{ $client->status }}</td>
+                                <td class="table-actions">
+                                    <a href="#"><button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></button></a>
+                                    <a href="{{route('edit.client',$client->id)}}"><button class="btn btn-sm btn-outline-secondary me-1"><i class="fas fa-edit"></i>{{$client->id}}</button></a>
+                                    <form>
+
+                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                    </form>
+                                </td>
+
+                            </tr>
+                        @endforeach
+                    </div>
+                    {{-- <tr>
                         <th scope="row">2</th>
                         <td>Jacob</td>
                         <td>Thornton</td>
@@ -103,7 +145,7 @@
                         <td>John</td>
                         <td>Doe</td>
                         <td>@social</td>
-                    </tr>
+                    </tr> --}}
                 </tbody>
             </table>
         </div>
