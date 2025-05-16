@@ -15,4 +15,21 @@ class DashboardController extends Controller
     public function client(){
         return view('dashboard.clients.client');
     }
+
+    public function create(Request $request){
+        try{
+            // dd($request->toArray());
+
+            $data = $request->validate([
+                'name' => 'string|max:50',
+                'mobile' => 'string|max:20',
+                'email' => 'string|required|unique:table,column,except,id'
+            ]);
+
+
+
+        }catch(\Exception $e){
+
+        }
+    }
 }

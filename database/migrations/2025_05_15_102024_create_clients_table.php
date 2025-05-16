@@ -17,10 +17,12 @@ return new class extends Migration
             $table->string('mobile');
             $table->string('email');
             $table->string('education');
-            $table->string('course')->nullable();
-            $table->decimal('percentage')->nullable();
+            $table->unsignedBigInteger('course_id');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->decimal('percentage',10,2)->nullable();
             $table->integer('age')->nullable();
             $table->boolean('status')->default(true);
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }
