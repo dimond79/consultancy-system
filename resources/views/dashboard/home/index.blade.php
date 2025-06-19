@@ -3,8 +3,20 @@
 @section('main-content')
 
     <div id="page-content-wrapper">
+        <div class="container-fluid">
+                 @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+
+                </div>
+            @endif
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-            <div class="container-fluid">
+
                 <span class="navbar-brand"><i class="bi bi-columns-gap me-2"></i>Admin Dashboard</span>
             </div>
         </nav>

@@ -125,7 +125,9 @@
                                 <td class="table-actions">
                                     <a href="#"><button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></button></a>
                                     <a href="{{route('edit.client',$client->id)}}"><button class="btn btn-sm btn-outline-secondary me-1"><i class="fas fa-edit"></i>{{$client->id}}</button></a>
-                                    <form>
+                                    <form action="{{route('client.delete',$client->id)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
 
                                         <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
                                     </form>
