@@ -65,9 +65,6 @@
                             @foreach ($courses as $course)
                                 <option value="{{ $course->id }}">{{ $course->course_name }}</option>
                             @endforeach
-                            {{-- <option>2</option>
-                        <option>3</option>
-                        <option>4</option> --}}
                         </select>
                     </div>
                     <div class="col-md-6">

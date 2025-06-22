@@ -43,7 +43,7 @@ class DashboardController extends Controller
 
             Client::create($data);
 
-            return back()->with('success','Data saved successfully.');
+            return back()->with('success','User created successfully.');
 
 
 

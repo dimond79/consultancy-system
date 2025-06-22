@@ -2,6 +2,20 @@
 
 
 @section('main-content')
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+
+        </div>
+    @endif
+
+    {{-- {{ $courses }} --}}
+
 
     <!-- Carousel Start -->
 
@@ -9,7 +23,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{asset('frontend/uploads/img/carousel-1.jpg')}}" alt="Image">
+                    <img class="w-100" src="{{ asset('frontend/uploads/img/carousel-1.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase">Business Consultancy</h5>
@@ -20,7 +34,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{asset('frontend/uploads/img/carousel-2.jpg')}}" alt="Image">
+                    <img class="w-100" src="{{ asset('frontend/uploads/img/carousel-2.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase">Business Consultancy</h5>
@@ -31,13 +45,11 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -54,37 +66,47 @@
         <div class="row g-0">
             <div class="col-lg-6 py-6 px-5">
                 <h1 class="display-5 mb-4">Welcome To <span class="text-primary">CONSULT</span></h1>
-                <h4 class="text-primary mb-4">Diam dolor diam ipsum sit. Clita erat ipsum et lorem stet no lorem sit clita duo justo magna dolore</h4>
-                <p class="mb-4">Et stet ipsum nonumy rebum eos justo, accusam invidunt aliquyam stet magna at et sanctus, vero sea sit amet dolores, sit dolor duo invidunt dolor, kasd rebum consetetur diam invidunt erat stet. Accusam nonumy lorem kasd eirmod. Justo clita sadipscing ea invidunt rebum sadipscing consetetur. Amet diam amet amet sanctus sanctus invidunt erat ipsum eirmod.</p>
+                <h4 class="text-primary mb-4">Diam dolor diam ipsum sit. Clita erat ipsum et lorem stet no lorem sit clita
+                    duo justo magna dolore</h4>
+                <p class="mb-4">Et stet ipsum nonumy rebum eos justo, accusam invidunt aliquyam stet magna at et sanctus,
+                    vero sea sit amet dolores, sit dolor duo invidunt dolor, kasd rebum consetetur diam invidunt erat stet.
+                    Accusam nonumy lorem kasd eirmod. Justo clita sadipscing ea invidunt rebum sadipscing consetetur. Amet
+                    diam amet amet sanctus sanctus invidunt erat ipsum eirmod.</p>
                 <a href="" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Get A Quote</a>
             </div>
             <div class="col-lg-6">
                 <div class="h-100 d-flex flex-column justify-content-center bg-primary p-5">
                     <div class="d-flex text-white mb-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4"
+                            style="width: 60px; height: 60px;">
                             <i class="fa fa-user-tie fs-4"></i>
                         </div>
                         <div class="ps-4">
                             <h3>Business Planning</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem sit clita duo</p>
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem
+                                et sit sed stet lorem sit clita duo</p>
                         </div>
                     </div>
                     <div class="d-flex text-white mb-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4"
+                            style="width: 60px; height: 60px;">
                             <i class="fa fa-chart-line fs-4"></i>
                         </div>
                         <div class="ps-4">
                             <h3>Financial Analaysis</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem sit clita duo</p>
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem
+                                et sit sed stet lorem sit clita duo</p>
                         </div>
                     </div>
                     <div class="d-flex text-white">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4"
+                            style="width: 60px; height: 60px;">
                             <i class="fa fa-balance-scale fs-4"></i>
                         </div>
                         <div class="ps-4">
                             <h3>legal Advisory</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem sit clita duo</p>
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem
+                                et sit sed stet lorem sit clita duo</p>
                         </div>
                     </div>
                 </div>
@@ -93,69 +115,139 @@
     </div>
 
 
+
     <!-- About End -->
 
 
     <!-- Services Start -->
-    <div class="container-fluid pt-6 px-5">
+
+                        {{-- //another approach of image it just place image inside circle
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4"
+                        style="width: 90px; height: 90px;">
+                        <img src="{{ asset('frontend/uploads/img/nzf.png') }}" alt="NZ-flag" style="width: 80px; height:auto;" >
+
+                    </div> --}}
+    <div class="container-fluid py-4 px-4">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 mb-0">What We Offer</h1>
+            <h2 class="display-5 mb-0">Select Your Dream Destination</h2>
             <hr class="w-25 mx-auto bg-primary">
         </div>
         <div class="row g-5">
+
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-secondary text-center px-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-user-tie fa-2x"></i>
+                <a href="#" style="text-decoration:none;">
+                    <div class="service-item bg-secondary text-center px-5 mb-4"
+                        style="background-image: url('{{ asset('frontend/uploads/img/usa.png') }}'); background-size: cover;
+                        background-position: center; border-radius: 10px;">
+
+                        <div class="rounded-circle mx-auto mb-3"
+                            style="width: 90px; height: 90px;
+                    background-image: url('{{ asset('frontend/uploads/img/usaf.png') }}');
+                    background-size: cover;
+                    background-position: center;
+                    border: 2px solid white;">
+                        </div>
+
+                        <h3 class="text-white mb-3">Study in U.S.A</h3>
+
                     </div>
-                    <h3 class="mb-3">Business Research</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-                </div>
+                </a>
+            </div>
+
+          <div class="col-lg-4 col-md-6">
+                <a href="#" style="text-decoration:none;">
+                    <div class="service-item bg-secondary text-center px-5 mb-4"
+                        style="background-image: url('{{ asset('frontend/uploads/img/uk.png') }}'); background-size: cover;
+                        background-position: center; border-radius: 10px;">
+
+                        <div class="rounded-circle mx-auto mb-3"
+                            style="width: 90px; height: 90px;
+                    background-image: url('{{ asset('frontend/uploads/img/ukf.png') }}');
+                    background-size: cover;
+                    background-position: center;
+                    border: 2px solid white;">
+                        </div>
+
+                        <h3 class="text-white mb-3">Study in United Kingdom</h3>
+
+                    </div>
+                </a>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-secondary text-center px-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-chart-pie fa-2x"></i>
+                <a href="#" style="text-decoration:none;">
+                    <div class="service-item bg-secondary text-center px-5 mb-4"
+                        style="background-image: url('{{ asset('frontend/uploads/img/ger.png') }}'); background-size: cover;
+                        background-position: center; border-radius: 10px;">
+
+                        <div class="rounded-circle mx-auto mb-3"
+                            style="width: 90px; height: 90px;
+                    background-image: url('{{ asset('frontend/uploads/img/gerf.png') }}');
+                    background-size: cover;
+                    background-position: center;
+                    border: 2px solid white;">
+                        </div>
+
+                        <h3 class="text-white mb-3">Study in Germany</h3>
+
                     </div>
-                    <h3 class="mb-3">Stretagic Planning</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-                </div>
+                </a>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-secondary text-center px-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-chart-line fa-2x"></i>
+                <a href="#" style="text-decoration:none;">
+                    <div class="service-item bg-secondary text-center px-5"
+                        style="background-image: url('{{ asset('frontend/uploads/img/can.png') }}'); background-size: cover;
+                        background-position: center; border-radius: 10px;">
+
+                        <div class="rounded-circle mx-auto mb-3"
+                            style="width: 90px; height: 90px;
+                    background-image: url('{{ asset('frontend/uploads/img/canf.png') }}');
+                    background-size: cover;
+                    background-position: center;
+                    border: 2px solid white;">
+                        </div>
+
+                        <h3 class="text-white mb-3">Study in Canada</h3>
+
                     </div>
-                    <h3 class="mb-3">Market Analysis</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-                </div>
+                </a>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-secondary text-center px-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-chart-area fa-2x"></i>
+                <a href="#" style="text-decoration:none;">
+                    <div class="service-item bg-secondary text-center px-5"
+                        style="background-image: url('{{ asset('frontend/uploads/img/aus.png') }}'); background-size: cover;
+                        background-position: center; border-radius: 10px;">
+
+                        <div class="rounded-circle mx-auto mb-3"
+                            style="width: 90px; height: 90px;
+                    background-image: url('{{ asset('frontend/uploads/img/ausf.png') }}');
+                    background-size: cover;
+                    background-position: center;
+                    border: 2px solid white;">
+                        </div>
+
+                        <h3 class="text-white mb-3">Study in Australia</h3>
+
                     </div>
-                    <h3 class="mb-3">Financial Analaysis</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-                </div>
+                </a>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-secondary text-center px-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-balance-scale fa-2x"></i>
+           <div class="col-lg-4 col-md-6">
+                <a href="#" style="text-decoration:none;">
+                    <div class="service-item bg-secondary text-center px-5"
+                        style="background-image: url('{{ asset('frontend/uploads/img/nz.jpg') }}'); background-size: cover;
+                        background-position: center; border-radius: 10px;">
+
+                        <div class="rounded-circle mx-auto mb-3"
+                            style="width: 90px; height: 90px;
+                    background-image: url('{{ asset('frontend/uploads/img/nzf.png') }}');
+                    background-size: cover;
+                    background-position: center;
+                    border: 2px solid white;">
+                        </div>
+
+                        <h3 class="text-white mb-3">Study in New Zealand</h3>
+
                     </div>
-                    <h3 class="mb-3">legal Advisory</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-secondary text-center px-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-house-damage fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">Tax & Insurance</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -238,30 +330,91 @@
     <div class="container-fluid bg-secondary px-0">
         <div class="row g-0">
             <div class="col-lg-6 py-6 px-5">
-                <h1 class="display-5 mb-4">Request A Free Quote</h1>
-                <p class="mb-4">Kasd vero erat ea amet justo no stet, et elitr no dolore no elitr sea kasd et dolor diam tempor. Nonumy sed dolore no eirmod sit nonumy vero lorem amet stet diam at. Ea at lorem sed et, lorem et rebum ut eirmod gubergren, dolor ea duo diam justo dolor diam ipsum dolore stet stet elitr ut. Ipsum amet labore lorem lorem diam magna sea, eos sed dolore elitr.</p>
-                <form>
+                <h4 class="display-9 mb-4">Get in touch.</h4>
+                <h1 class="display-5 mb-4">Please drop your Inquiry here.</h1>
+                <p class="mb-4">To start consultation and admission, kindly fill up the form , one of our advisers will
+                    contact you via email in less than 24 hours</p>
+                <form action="{{ route('client.create') }}" method="POST">
+                    @csrf
                     <div class="row gx-3">
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="form-floating-1" placeholder="John Doe">
+                                <input type="text" name="name" class="form-control" id="form-floating-1"
+                                    placeholder="John Doe">
                                 <label for="form-floating-1">Full Name</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="form-floating-2" placeholder="name@example.com">
+                                <input type="number" name ="mobile" class="form-control" id="mobile"
+                                    placeholder="Enter you number">
+                                <label for="form-floating-2">Mobile No.</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="email" name="email" class="form-control" id="form-floating-2"
+                                    placeholder="name@example.com">
                                 <label for="form-floating-2">Email address</label>
                             </div>
                         </div>
                         <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="number" name="percentage" class="form-control" id="percentage"
+                                    placeholder="Enter Percentage/GPA">
+                                <label for="form-floating-2">Percentage/GPA</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
                             <div class="form-floating">
-                                <select class="form-select" id="floatingSelect" aria-label="Financial Consultancy">
-                                    <option selected>Financial Consultancy</option>
-                                    <option value="1">Strategy Consultancy</option>
-                                    <option value="2">Tax Consultancy</option>
+                                <select type="text" name="education" class="form-select" id="floatingSelect"
+                                    required>
+                                    <option selected>Education level</option>
+                                    <option value="High School">High School</option>
+                                    <option value="Bachelor">Bachelor</option>
+                                    <option value="Master">Master</option>
+
                                 </select>
-                                <label for="floatingSelect">Select A Service</label>
+                                <label for="floatingSelect">Highest Education</label>
+                            </div>
+                        </div>
+                        {{-- <div class="col-6">
+                            <div class="form-floating">
+                                <select type="text" name="course_id" class="form-select" id="floatingSelect"
+                                    required>
+                                    <option selected>Education level</option>
+                                    <option value="1">High School</option>
+                                    <option value="2">Bachelor</option>
+                                    <option value="3">Master</option>
+
+                                </select>
+                                <label for="floatingSelect">Course</label>
+                            </div>
+                        </div> --}}
+                        <div class="col-6">
+                            <select name="course_id" id="floatingSelect" class="form-select" required>
+                                <option selected disabled>Courses</option>
+                                @foreach ($courses as $course)
+                                    <option value="{{ $course->id }}">{{ $course->course_name }}</option>
+                                @endforeach
+                            </select>
+                            <label for="floatingSelect">Course</label>
+                        </div>
+
+
+
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="number" name="age" class="form-control" id="form-floating-2"
+                                    placeholder="Age">
+                                <label for="form-floating-2">Age</label>
+                            </div>
+                        </div></br>
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                {{-- <input type="textbox" class="form-control" id="form-floating-2" placeholder="Your Message!"> --}}
+                                <textarea class="form-control" name="message" id="form-floating-2" placeholder="Your Message!"></textarea>
+                                <label for="form-floating-2">Message</label>
                             </div>
                         </div>
                         <div class="col-6">
@@ -272,7 +425,8 @@
             </div>
             <div class="col-lg-6" style="min-height: 400px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100" src=" {{asset('frontend/uploads/img/quote.jpg')}}" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src=" {{ asset('frontend/uploads/img/quote.jpg') }}"
+                        style="object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -320,7 +474,4 @@
         </div>
     </div> --}}
     <!-- Testimonial End -->
-
-
 @endsection
-

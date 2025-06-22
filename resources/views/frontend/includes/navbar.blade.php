@@ -1,12 +1,11 @@
 <div>
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm px-2" style="background-color: rgb(229, 218, 215); padding-top:0; padding-bottom:0; ">
         <a href="index.html" class="navbar-brand p-0">
-            <h1 class="m-0 text-uppercase text-primary">PathAbroad</h1>
+            {{-- <h3 class="m-0 text-uppercase text-primary">Path-Abroad</h3> --}}
+            <img src="{{asset('dashboard/uploads/logo3.png')}}" alt="path-abroad logo" style="height: 60px; ">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <div class="navbar-collapse" >
             <div class="navbar-nav ms-auto py-0 me-n3">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
