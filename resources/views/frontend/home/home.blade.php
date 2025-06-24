@@ -135,7 +135,7 @@
         <div class="row g-5">
 
             <div class="col-lg-4 col-md-6">
-                <a href="#" style="text-decoration:none;">
+                <a href="https://www.nepalec.edu.np/destination/study-in-usa" style="text-decoration:none;">
                     <div class="service-item bg-secondary text-center px-5 mb-4"
                         style="background-image: url('{{ asset('frontend/uploads/img/usa.png') }}'); background-size: cover;
                         background-position: center; border-radius: 10px;">
@@ -155,7 +155,7 @@
             </div>
 
           <div class="col-lg-4 col-md-6">
-                <a href="#" style="text-decoration:none;">
+                <a href="https://www.nepalec.edu.np/destination/study-in-united-kingdom" style="text-decoration:none;">
                     <div class="service-item bg-secondary text-center px-5 mb-4"
                         style="background-image: url('{{ asset('frontend/uploads/img/uk.png') }}'); background-size: cover;
                         background-position: center; border-radius: 10px;">
@@ -174,7 +174,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-6">
-                <a href="#" style="text-decoration:none;">
+                <a href="https://eduvibe.com.np/study-in-germany-at-best-institute-in-nepal/" style="text-decoration:none;">
                     <div class="service-item bg-secondary text-center px-5 mb-4"
                         style="background-image: url('{{ asset('frontend/uploads/img/ger.png') }}'); background-size: cover;
                         background-position: center; border-radius: 10px;">
@@ -193,7 +193,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-6">
-                <a href="#" style="text-decoration:none;">
+                <a href="https://www.nepalec.edu.np/destination/study-in-canada" style="text-decoration:none;">
                     <div class="service-item bg-secondary text-center px-5"
                         style="background-image: url('{{ asset('frontend/uploads/img/can.png') }}'); background-size: cover;
                         background-position: center; border-radius: 10px;">
@@ -212,7 +212,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-6">
-                <a href="#" style="text-decoration:none;">
+                <a href="https://www.nepalec.edu.np/destination/study-in-australia" style="text-decoration:none;">
                     <div class="service-item bg-secondary text-center px-5"
                         style="background-image: url('{{ asset('frontend/uploads/img/aus.png') }}'); background-size: cover;
                         background-position: center; border-radius: 10px;">
@@ -231,7 +231,7 @@
                 </a>
             </div>
            <div class="col-lg-4 col-md-6">
-                <a href="#" style="text-decoration:none;">
+                <a href="https://www.nepalec.edu.np/destination/study-in-new-zealand" style="text-decoration:none;">
                     <div class="service-item bg-secondary text-center px-5"
                         style="background-image: url('{{ asset('frontend/uploads/img/nz.jpg') }}'); background-size: cover;
                         background-position: center; border-radius: 10px;">

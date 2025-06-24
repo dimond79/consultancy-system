@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\auth\AuthenticationController;
 use App\Http\Controllers\dashboard\DashboardController;
 use App\Http\Controllers\frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',[DashboardController::class, 'index'])->name('admin.index');
+Route::get('/admin',[DashboardController::class, 'index'])->name('admin.index');
+
+//login
+Route::get('/login',[AuthenticationController::class, 'showLogin'])->name('login.page');
+Route::post('/login',[AuthenticationController::class, 'login'])->name('admin.login');
 
 
 Route::get('/admin/client',[DashboardController::class, 'client'])->name('admin.client');
@@ -19,4 +24,4 @@ Route::delete('admin/delete/{id}',[DashboardController::class, 'delete'])->name(
 
 
 //frontend starts
-Route::get('home',[HomeController::class, 'index'])->name('home.index');
+Route::get('/',[HomeController::class, 'index'])->name('home.index');
