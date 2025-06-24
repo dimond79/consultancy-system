@@ -105,6 +105,11 @@ h6,
     outline: none;
     transition: .5s;
 }
+.navbar-brand img {
+    height: 80px;  /* match to fit inside navbar */
+    object-fit: contain;
+    display: block;
+}
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 15px;
@@ -128,6 +133,9 @@ h6,
     bottom: 0;
     background: rgba(21, 36, 64, .7);
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 576px) {
@@ -144,13 +152,102 @@ h6,
 
 .carousel-control-prev,
 .carousel-control-next {
-    width: 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    z-index: 999 !important;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    pointer-events: auto;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Additional carousel fixes */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    align-items: center;
+    width: 100%;
+    transition: transform .6s ease;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+/* Fix carousel image display */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+/* Ensure carousel container has proper dimensions */
+#header-carousel {
+    height: auto;
+    min-height: 500px;
+
+}
+
+
+/* Fix any potential white space issues */
+.carousel-item {
+    background-color: #000;
+}
+
+/* Additional fixes for carousel display */
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container-fluid.p-0 {
+    overflow: hidden;
 }
 
 .service-item {

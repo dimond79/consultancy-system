@@ -9,7 +9,7 @@
             $('.navbar').removeClass('sticky-top');
         }
     });
-    
+
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
@@ -26,8 +26,8 @@
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -55,6 +55,35 @@
             '<i class="bi bi-arrow-right"></i>'
         ],
     });
-    
+
+    // Initialize Bootstrap carousel
+    $(document).ready(function() {
+        // Ensure carousel is properly initialized
+        var carouselElement = document.getElementById('header-carousel');
+        if (carouselElement) {
+            var carousel = new bootstrap.Carousel(carouselElement, {
+                interval: 5000,
+                wrap: true,
+                keyboard: true,
+                pause: 'hover'
+            });
+        }
+
+        // Add click handlers for carousel controls
+        $('.carousel-control-prev').on('click', function() {
+            var carousel = bootstrap.Carousel.getInstance(document.getElementById('header-carousel'));
+            if (carousel) {
+                carousel.prev();
+            }
+        });
+
+        $('.carousel-control-next').on('click', function() {
+            var carousel = bootstrap.Carousel.getInstance(document.getElementById('header-carousel'));
+            if (carousel) {
+                carousel.next();
+            }
+        });
+    });
+
 })(jQuery);
 

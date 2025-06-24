@@ -26,20 +26,24 @@
                     <img class="w-100" src="{{ asset('frontend/uploads/img/carousel-1.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase">Business Consultancy</h5>
-                            <h1 class="display-1 text-white mb-md-4">We Provide Solution On Your Business</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
+                            <h5 class="text-white text-uppercase">Education Consultancy</h5>
+                            <h2 class="display-2 text-white text-shadow mb-md-4">Your Journey to Study Abroad Begins Here
+                            </h2>
+                            <a href="#contact-form" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Free
+                                Guidance</a>
+                            <a href="#contact" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('frontend/uploads/img/carousel-2.jpg') }}" alt="Image">
+                    <img class="w-100" src="{{ asset('frontend/uploads/img/carousel-3.png') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase">Business Consultancy</h5>
-                            <h1 class="display-1 text-white mb-md-4">Take Our Help To Reach The Top Level</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a>
+                            <h5 class="text-white text-uppercase">Education Consultancy</h5>
+                            <h1 class="display-3 text-white mb-md-4">Expert Guidance for Your International Education Dream
+                            </h1>
+                            <a href="#contact-form" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Free
+                                Guidance</a>
                             <a href="" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
                         </div>
                     </div>
@@ -62,17 +66,28 @@
 
     <!-- About Start -->
 
-    <div class="container-fluid bg-secondary p-0">
+    <div id="about" class="container-fluid bg-secondary p-0">
         <div class="row g-0">
             <div class="col-lg-6 py-6 px-5">
-                <h1 class="display-5 mb-4">Welcome To <span class="text-primary">CONSULT</span></h1>
-                <h4 class="text-primary mb-4">Diam dolor diam ipsum sit. Clita erat ipsum et lorem stet no lorem sit clita
-                    duo justo magna dolore</h4>
-                <p class="mb-4">Et stet ipsum nonumy rebum eos justo, accusam invidunt aliquyam stet magna at et sanctus,
-                    vero sea sit amet dolores, sit dolor duo invidunt dolor, kasd rebum consetetur diam invidunt erat stet.
-                    Accusam nonumy lorem kasd eirmod. Justo clita sadipscing ea invidunt rebum sadipscing consetetur. Amet
-                    diam amet amet sanctus sanctus invidunt erat ipsum eirmod.</p>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Get A Quote</a>
+                <h1 class="display-5 mb-4">Welcome To Path-Abroad</h1>
+                <h5 class="mb-4">At Path-Abroad Education Consultancy, we are dedicated to turning your dreams of studying
+                    abroad into reality. With years of experience and a team of expert counselors, we provide personalized
+                    guidance and comprehensive support to students aspiring to pursue higher education in top universities
+                    around the world.
+
+                    Our mission is to simplify the complex process of international education by offering trustworthy
+                    advice, visa assistance, and career planning services tailored to each student’s unique goals.</h5>
+                <h4>Our Vision</h4>
+                <p class="mb-4">
+                    To be the leading education consultancy in Nepal, empowering students with the knowledge and resources
+                    they need to excel internationally.</p>
+                <h4>Our Commitment</h4>
+                <p class="mb-4">
+                    We believe in integrity, transparency, and student success. Your future is our priority, and we strive
+                    to make your study abroad journey smooth, informed, and inspiring.
+
+                </p>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Get Free Guidance</a>
             </div>
             <div class="col-lg-6">
                 <div class="h-100 d-flex flex-column justify-content-center bg-primary p-5">
@@ -82,9 +97,9 @@
                             <i class="fa fa-user-tie fs-4"></i>
                         </div>
                         <div class="ps-4">
-                            <h3>Business Planning</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem
-                                et sit sed stet lorem sit clita duo</p>
+                            <h3>Expert Guidance</h3>
+                            <p class="mb-0">Our knowledgeable consultants stay updated with the latest admission criteria,
+                                visa regulations, and scholarship opportunities across popular study destinations.</p>
                         </div>
                     </div>
                     <div class="d-flex text-white mb-5">
@@ -93,9 +108,22 @@
                             <i class="fa fa-chart-line fs-4"></i>
                         </div>
                         <div class="ps-4">
-                            <h3>Financial Analaysis</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem
-                                et sit sed stet lorem sit clita duo</p>
+                            <h3>Personalized Support</h3>
+                            <p class="mb-0">We understand that every student’s journey is different. We provide one-on-one
+                                counseling to help you choose the right course, university, and country based on your
+                                interests, academic background, and career aspirations.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex text-white mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-chart-line fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Trusted Network</h3>
+                            <p class="mb-0"> We have strong partnerships with reputed universities and educational
+                                institutions globally, ensuring you get authentic information and timely updates.</p>
                         </div>
                     </div>
                     <div class="d-flex text-white">
@@ -104,11 +132,12 @@
                             <i class="fa fa-balance-scale fs-4"></i>
                         </div>
                         <div class="ps-4">
-                            <h3>legal Advisory</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem
-                                et sit sed stet lorem sit clita duo</p>
+                            <h3>End-to-End Service</h3>
+                            <p class="mb-0">From university selection and application assistance to visa processing and
+                                pre-departure briefings, we are with you every step of the way.</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -121,7 +150,7 @@
 
     <!-- Services Start -->
 
-                        {{-- //another approach of image it just place image inside circle
+    {{-- //another approach of image it just place image inside circle
                     <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4"
                         style="width: 90px; height: 90px;">
                         <img src="{{ asset('frontend/uploads/img/nzf.png') }}" alt="NZ-flag" style="width: 80px; height:auto;" >
@@ -154,7 +183,7 @@
                 </a>
             </div>
 
-          <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <a href="https://www.nepalec.edu.np/destination/study-in-united-kingdom" style="text-decoration:none;">
                     <div class="service-item bg-secondary text-center px-5 mb-4"
                         style="background-image: url('{{ asset('frontend/uploads/img/uk.png') }}'); background-size: cover;
@@ -174,7 +203,8 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-6">
-                <a href="https://eduvibe.com.np/study-in-germany-at-best-institute-in-nepal/" style="text-decoration:none;">
+                <a href="https://eduvibe.com.np/study-in-germany-at-best-institute-in-nepal/"
+                    style="text-decoration:none;">
                     <div class="service-item bg-secondary text-center px-5 mb-4"
                         style="background-image: url('{{ asset('frontend/uploads/img/ger.png') }}'); background-size: cover;
                         background-position: center; border-radius: 10px;">
@@ -230,7 +260,7 @@
                     </div>
                 </a>
             </div>
-           <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <a href="https://www.nepalec.edu.np/destination/study-in-new-zealand" style="text-decoration:none;">
                     <div class="service-item bg-secondary text-center px-5"
                         style="background-image: url('{{ asset('frontend/uploads/img/nz.jpg') }}'); background-size: cover;
@@ -334,7 +364,7 @@
                 <h1 class="display-5 mb-4">Please drop your Inquiry here.</h1>
                 <p class="mb-4">To start consultation and admission, kindly fill up the form , one of our advisers will
                     contact you via email in less than 24 hours</p>
-                <form action="{{ route('client.create') }}" method="POST">
+                <form id="contact-form" action="{{ route('client.create') }}" method="POST">
                     @csrf
                     <div class="row gx-3">
                         <div class="col-6">
@@ -418,7 +448,7 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <button class="btn btn-primary w-100 h-100" type="submit">Request A Quote</button>
+                            <button class="btn btn-primary w-100 h-100" type="submit">Book a Free Session</button>
                         </div>
                     </div>
                 </form>

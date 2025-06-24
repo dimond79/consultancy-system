@@ -58,7 +58,9 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="{{asset('dashboard/assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    {{-- this has bootstrap 4 version, you need to upgrade with 5 --}}
+    {{-- <script src="{{asset('dashboard/assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('lib/easing/easing.min.js')}}"></script>
     <script src="{{asset('lib/waypoints/waypoints.min.js')}}"></script>
 
